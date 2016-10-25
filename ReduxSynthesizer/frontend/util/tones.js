@@ -18,7 +18,8 @@ export const TONES = {
   ';': 2637.02,         // E7
   "'": 2793.83,         // F7
   ']': 2959.96,         // F#7
-  'Enter': 3135.96     // G7
+  'Enter': 3135.96,     // G7
+  'Delete': 3520     // A7
 };
 
 export const NOTE_NAMES = Object.keys(TONES);

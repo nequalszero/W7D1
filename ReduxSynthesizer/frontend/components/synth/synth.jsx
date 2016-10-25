@@ -3,6 +3,7 @@ import Note from '../../util/note.js';
 import { NOTE_NAMES, TONES } from '../../util/tones.js';
 import merge from 'lodash/merge';
 import $ from 'jquery';
+//import NoteKey from './note_key.jsx';
 
 class Synth extends React.Component {
   constructor(props){
@@ -49,7 +50,9 @@ class Synth extends React.Component {
       <div>
         Synth
         <ul>
-          {NOTE_NAMES.map((key) => <li key={key} onKeyPress={this.onKeyDown} onKeyUp={this.onKeyUp}>{key}</li>) }
+          {NOTE_NAMES.map((note) => <li key={note} >
+            {note}
+          </li>)}
         </ul>
       </div>
     );

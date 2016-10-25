@@ -23168,6 +23168,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	//import NoteKey from './note_key.jsx';
+	
 	var Synth = function (_React$Component) {
 	  _inherits(Synth, _React$Component);
 	
@@ -23225,8 +23227,6 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this3 = this;
-	
 	      this.playNotes();
 	      return _react2.default.createElement(
 	        'div',
@@ -23235,11 +23235,11 @@
 	        _react2.default.createElement(
 	          'ul',
 	          null,
-	          _tones.NOTE_NAMES.map(function (key) {
+	          _tones.NOTE_NAMES.map(function (note) {
 	            return _react2.default.createElement(
 	              'li',
-	              { key: key, onKeyPress: _this3.onKeyDown, onKeyUp: _this3.onKeyUp },
-	              key
+	              { key: note },
+	              note
 	            );
 	          })
 	        )
@@ -23415,7 +23415,8 @@
 	  ';': 2637.02, // E7
 	  "'": 2793.83, // F7
 	  ']': 2959.96, // F#7
-	  'Enter': 3135.96 // G7
+	  'Enter': 3135.96, // G7
+	  'Delete': 3520 // A7
 	};
 	
 	var NOTE_NAMES = exports.NOTE_NAMES = Object.keys(TONES);
